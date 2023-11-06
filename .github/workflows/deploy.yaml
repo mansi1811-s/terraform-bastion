@@ -2,12 +2,8 @@ name: Teraform CI CD pipeline for Deploying Bastion Server
 run-name: ${{ github.actor }} has triggered the pipeline
 
 on: 
-  # push:
-  #   # branches:
-  #   #   - 'main'
   workflow_dispatch:
     inputs:
-      # Terraform action you want to perform
       action:
         description: 'Terraform Action to Perform'
         type: choice
