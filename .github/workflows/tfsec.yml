@@ -3,7 +3,7 @@ name: tfsec
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    # branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
   schedule:
@@ -27,8 +27,8 @@ jobs:
         with:
           sarif_file: tfsec.sarif
 
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v2
+      - name: Upload SARIF Report
+        uses: actions/upload-artifact@v2
         with:
           name: tfsec-results
-          sarif_file: tfsec.sarif
+          path: tfsec.sarif
