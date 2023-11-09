@@ -63,6 +63,6 @@ jobs:
           to: mansi.s@sigmoidanalytics.com
           from: Mansi Singh
           subject: SARIF Report for tfsec scanning
-          body: Please find the SARIF report attached.
+          body: Please find the tfsec report attached.
           attachments: sarif-report/tfsec.sarif
         if: always()
