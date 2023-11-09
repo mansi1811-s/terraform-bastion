@@ -3,7 +3,6 @@ name: tfsec
 on:
   workflow_dispatch:
   push:
-    # branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
   schedule:
@@ -11,7 +10,7 @@ on:
 
 jobs:
   tfsec:
-    name: tfsec sarif report
+    name: tfsec check
     runs-on: ubuntu-latest
     permissions:
       actions: read

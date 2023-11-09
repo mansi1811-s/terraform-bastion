@@ -23,7 +23,7 @@ env:
 
 jobs:
   tfsec:
-    name: tfsec sarif report
+    name: tfsec check
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -110,7 +110,7 @@ jobs:
         id: plan
         run: terraform plan
         working-directory: .
-        
+
       - name: Terraform Destroy
         id: apply
         run: terraform destroy --auto-approve
