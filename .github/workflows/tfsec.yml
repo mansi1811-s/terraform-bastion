@@ -23,11 +23,7 @@ jobs:
 
       - name: Run Tfsec
         uses: aquasecurity/tfsec-action@v1.0.0
-
-      - name: Set TFSEC_STATUS
-        run: echo "TFSEC_STATUS=success" >> $GITHUB_ENV
-        if: success()
-
+        
       - name: Scan with tfsec
         uses: aquasecurity/tfsec-sarif-action@9a83b5c3524f825c020e356335855741fd02745f
         with:

@@ -22,7 +22,7 @@ jobs:
       security-events: write
 
     steps:  
-      - name: Clone repo
+      - name: Checkout repo
         uses: actions/checkout@v2
 
       - name: Run Tfsec
@@ -39,10 +39,6 @@ jobs:
         with:
           name: sarif-report
           path: tfsec.sarif
-        if: always()
-
-      - name: Checkout repository
-        uses: actions/checkout@v2
         if: always()
 
       - name: Download SARIF Report
