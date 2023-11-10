@@ -127,7 +127,7 @@ resource "aws_route_table" "nat-route-table" {
   }
 }
 
-# 8 associate private subnet to route table to enable internet access
+# 8 associate  private subnet to route table to enable internet access
 resource "aws_route_table_association" "private-route-table-association" {
   subnet_id      = aws_subnet.private-subnet-1.id
   route_table_id = aws_route_table.nat-route-table.id
